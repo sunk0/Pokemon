@@ -1,3 +1,4 @@
 # Pokemon
-# 1-st step: -npm install
-# 2-nd step: -npm run start
+# clone repo
+# npm install
+# npm run start
