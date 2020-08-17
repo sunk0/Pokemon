@@ -59,19 +59,22 @@ export class Pokemon {
   }
 
   attackPokemon = (pokemon) => {
+
+      //This is that way to make the battle longer!!!
       pokemon.hp = Math.round(pokemon.hp - (this.attack / pokemon.defence) *(1 + Math.floor(Math.random()*8)), 3);
-      var frequency = 300; // how often to initiate blinking
-      if (! blinking || Math.floor(Date.now() / frequency) % 2) {
-        // ctx.drawImage(...); // redraw image here;
-        this.blinkCounter += 1;
-      }
-      if ( this.blinkCounter === 3) {
+
+
+      //TODO MAKE BLIKNING ANIMATION
+      console.log(pokemon.hp);
+      
+      //REFACTOR
+      if(pokemon.hp <= 0){
         return true;
-      } else {
-        return false;
       }
-  //  console.warn(pokemon);
-    // (Attack / Opponent Defense) * A random number between 0 and 200
+      else{
+        return true;
+      }
+     
 
   }
 

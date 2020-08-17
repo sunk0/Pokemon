@@ -285,8 +285,10 @@ export class Canvas {
   };
 
   generateRandom = (min, max , pokemon) => {
-    var num = Math.floor(Math.random() * (max - min + 1)) + min;
-    return num === pokemon.id ? this.generateRandom(min, max) : num;
+    if(pokemon){
+      const num = Math.floor(Math.random() * (max - min + 1)) + min;
+      return num === pokemon.id ? this.generateRandom(min, max) : num;
+    } 
   };
 
   drawHpBar = (x, y, width, height, percentageHpOfOriginal) => {
